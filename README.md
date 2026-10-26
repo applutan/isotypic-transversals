@@ -40,7 +40,7 @@ $$
 Given an origin vertex $o \in \mathbb{Z}\_n$ and an isotypic composition $\gamma = (\gamma\_1, \dots, \gamma\_k)$, the prefix step sums generate a $k$-vertex cyclic polygon $G(o, \gamma) \subset \mathbb{Z}\_n$:
 
 $$
-G(o, \gamma) = \left\lbrace o + \sum_{j=1}^{r-1} \gamma_j \pmod n \;\middle|\; 1 \le r \le k \right\rbrace
+G(o, \gamma) = \lbrace g_1, g_2, \dots, g_k \rbrace \subset \mathbb{Z}\_n, \quad g_r = o + \sum_{j=1}^{r-1} \gamma_j \pmod n \quad (1 \le r \le k)
 $$
 
 where indices in $\mathbb{Z}\_n$ are taken in $\lbrace 1, \dots, n \rbrace$. Because each $\gamma\_j \ge 1$ and $\sum\_{j=1}^k \gamma\_j = n$, the $k$ vertices of $G(o, \gamma)$ are distinct.
@@ -195,19 +195,19 @@ The sequence $T(n)$ for $n \ge 1$:
 | 1 | Prime | 1 | 1 | 0 | $0.00\%$ | Verified |
 | 2 | Prime | 2 | 4 | 0 | $0.00\%$ | Verified |
 | 3 | Prime | 5 | 18 | 0 | $0.00\%$ | Verified |
-| 4 | Prime Power ($2^2$) | 15 | 68 | 1 | $6.67\%$ | Verified |
+| 4 | Prime&nbsp;Power $(2^2)$ | 15 | 68 | 1 | $6.67\%$ | Verified |
 | 5 | Prime | 52 | 305 | 0 | $0.00\%$ | Verified |
-| 6 | Composite ($2 \cdot 3$) | 203 | 1,584 | 14 | $6.90\%$ | Verified |
+| 6 | Composite $(2 \cdot 3)$ | 203 | 1,584 | 14 | $6.90\%$ | Verified |
 | 7 | Prime | 877 | 8,302 | 49 | $5.59\%$ | Verified |
-| 8 | Prime Power ($2^3$) | 4,140 | 48,232 | 332 | $8.02\%$ | Verified |
-| 9 | Prime Power ($3^2$) | 21,147 | 304,335 | 1,591 | $7.52\%$ | Verified |
-| 10 | Composite ($2 \cdot 5$) | 115,975 | 2,056,440 | 9,402 | $8.11\%$ | Verified |
+| 8 | Prime&nbsp;Power $(2^3)$ | 4,140 | 48,232 | 332 | $8.02\%$ | Verified |
+| 9 | Prime&nbsp;Power $(3^2)$ | 21,147 | 304,335 | 1,591 | $7.52\%$ | Verified |
+| 10 | Composite $(2 \cdot 5)$ | 115,975 | 2,056,440 | 9,402 | $8.11\%$ | Verified |
 | 11 | Prime | 678,570 | 14,609,738 | 54,978 | $8.10\%$ | Verified |
-| 12 | Composite ($2^2 \cdot 3$) | 4,213,597 | 111,266,124 | 339,764 | $8.06\%$ | Verified |
+| 12 | Composite $(2^2 \cdot 3)$ | 4,213,597 | 111,266,124 | 339,764 | $8.06\%$ | Verified |
 | 13 | Prime | 27,644,437 | 893,073,857 | 2,136,030 | $7.73\%$ | Verified |
-| 14 | Composite ($2 \cdot 7$) | 190,899,322 | 7,506,934,148 | 14,546,877 | $7.62\%$ | Verified |
-| 15 | Composite ($3 \cdot 5$) | 1,382,958,545 | 66,728,430,600 | 99,427,954 | $7.19\%$ | Verified |
-| 16 | Prime Power ($2^4$) | 10,480,142,147 | 617,481,675,248 | --- | --- | Closed-form |
+| 14 | Composite $(2 \cdot 7)$ | 190,899,322 | 7,506,934,148 | 14,546,877 | $7.62\%$ | Verified |
+| 15 | Composite $(3 \cdot 5)$ | 1,382,958,545 | 66,728,430,600 | 99,427,954 | $7.19\%$ | Verified |
+| 16 | Prime&nbsp;Power $(2^4)$ | 10,480,142,147 | 617,481,675,248 | --- | --- | Closed-form |
 
 Every set partition through $\mathbb{Z}\_{15}$—comprising over **$1.57\text{ billion}$ partitions**—has been evaluated exhaustively using the parallel bitmask C++ engine, matching the closed-form theorem to the exact integer.
 
