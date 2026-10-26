@@ -1,0 +1,7 @@
+# Build artifacts
+fast_census
+*.o
+
+# Temporary files
+*~
+*.swp
