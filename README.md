@@ -12,7 +12,9 @@ Let $\mathbb{Z}\_n = \lbrace 1, 2, \dots, n \rbrace$ denote the discrete cyclic 
 
 In the geometric study of composition mosaics, the vertices of $\mathbb{Z}\_n$ are partitioned into non-overlapping subsets. When the blocks are uniform, complete conjugate orthogonal transversal systems exist. For non-uniform set partitions, however, an individual cyclic polygon can still act as an exact transversal cross-section.
 
-![Dual Transversal on Z12](img/fig1_z12_intro_duality.png)
+<p align="center">
+  <img src="img/fig1_z12_intro_duality.png" width="580" alt="Dual Transversal on Z12" />
+</p>
 
 **Figure 1**: Primal $(3, 5, 4)$ mosaic and dual transversal on $\mathbb{Z}\_{12}$.
 
@@ -122,11 +124,15 @@ On finite cyclic lattices, transversal realisability is governed by the interpla
 
 On $\mathbb{Z}\_3$ and $\mathbb{Z}\_5$, 100% of all set partitions admit at least one valid transversal. Step distances cannot be trapped in sub-lattice cosets.
 
-![Z3 Forbidden Origin](img/fig2_z3_geometry.png)
+<p align="center">
+  <img src="img/fig2_z3_geometry.png" width="380" alt="Z3 Forbidden Origin" />
+</p>
 
 **Figure 2**: The forbidden origin on $\mathbb{Z}\_3$ for partition shape $(2, 1)$.
 
-![Z5 Universal Realisability](img/fig4_z5_geometry.png)
+<p align="center">
+  <img src="img/fig4_z5_geometry.png" width="380" alt="Z5 Universal Realisability" />
+</p>
 
 **Figure 3**: Universal transversal realisability on $\mathbb{Z}\_5$ for shape $(2, 2, 1)$.
 
@@ -138,13 +144,45 @@ On composite lattices ($\mathbb{Z}\_4, \mathbb{Z}\_6, \dots$), three distinct ob
 2. **Parity-Alternation Deficits**: On $\mathbb{Z}\_6$, the partition $\lbrace \lbrace 1,3,5 \rbrace, \lbrace 2 \rbrace, \lbrace 4 \rbrace, \lbrace 6 \rbrace \rbrace$ forces all steps in $\gamma \in \mathfrak{S}(3, 1, 1, 1)$ to be odd, requiring parity alternation $(\text{odd}, \text{even}, \text{odd}, \text{even})$ that cannot meet the $(1 \text{ odd}, 3 \text{ even})$ block demand.
 3. **Metric Distance Spectrum Gaps**: On $\mathbb{Z}\_6$, shape $(4, 1, 1)$ partitions with antipodal singletons $\lbrace 3 \rbrace, \lbrace 6 \rbrace$ demand cyclic distance $\Delta = 3$, which is absent from the distance spectrum of triangles with edges $(4, 1, 1)$.
 
-![Z4 Coset Obstruction](img/fig3_z4_geometry.png)
+<p align="center">
+  <img src="img/fig3_z4_geometry.png" width="550" alt="Z4 Coset Obstruction" />
+</p>
 
 **Figure 4**: Stride-2 coset obstruction versus valid transversal on $\mathbb{Z}\_4$.
 
-![Z6 Obstruction Mechanisms](img/fig5_z6_geometry.png)
+<p align="center">
+  <img src="img/fig5_z6_geometry.png" width="650" alt="Z6 Obstruction Mechanisms" />
+</p>
 
 **Figure 5**: Obstruction mechanisms on the hexagonal lattice $\mathbb{Z}\_6$.
+
+### Higher-Order Solutions on $\mathbb{Z}\_8$ and $\mathbb{Z}\_{12}$
+
+On higher-order lattices, non-uniform partitions with $k \ge 4$ blocks exhibit richer transversal configurations:
+
+<p align="center">
+  <img src="img/fig6_z8_geometry.png" width="580" alt="Z8 Transversal Geometry" />
+</p>
+
+**Figure 6**: Primal partition and dual transversal quadrilateral on $\mathbb{Z}\_8$.
+
+On the octagonal lattice $\mathbb{Z}\_8$, the 4-block partition $\mathcal{M} = \lbrace \lbrace 1, 2, 3 \rbrace, \lbrace 4, 5 \rbrace, \lbrace 6, 7 \rbrace, \lbrace 8 \rbrace \rbrace$ of shape $(3, 2, 2, 1)$ decomposes the circle into an arc of 3 vertices $m\_1$, two 2-vertex chords $m\_2$ and $m\_3$, and a singleton $m\_4$. The composition transversal $G(1, (3, 2, 2, 1)) = \lbrace 1, 4, 6, 8 \rbrace$ traces cyclic steps $(3, 2, 2, 1)$, selecting the initial vertex of each consecutive block.
+
+<p align="center">
+  <img src="img/fig7_z12_geometry.png" width="580" alt="Z12 Four-Block Geometry" />
+</p>
+
+**Figure 7**: Non-uniform 4-block partition and dual transversal quadrilateral on $\mathbb{Z}\_{12}$.
+
+On the dodecagonal lattice $\mathbb{Z}\_{12}$, the strictly decreasing partition shape $(6, 3, 2, 1)$ decomposes the lattice into a semicircle 6-block $m\_1 = \lbrace 1, \dots, 6 \rbrace$, a 3-block $m\_2 = \lbrace 7, 8, 9 \rbrace$, a 2-block $m\_3 = \lbrace 10, 11 \rbrace$, and a singleton $m\_4 = \lbrace 12 \rbrace$. The transversal $G(1, (6, 3, 2, 1)) = \lbrace 1, 7, 10, 12 \rbrace$ spans the vertical diameter $1 \to 7$ (distance 6) followed by steps of length 3, 2, and 1, visiting every block exactly once.
+
+<p align="center">
+  <img src="img/fig8_z12_pentatonic_hexagram.png" width="580" alt="Intersecting Pentatonic Mosaic on Z12" />
+</p>
+
+**Figure 8**: Intersecting hexagram-diameter mosaic and dual pentatonic transversal on $\mathbb{Z}\_{12}$.
+
+An exemplar of maximum interior chord intersection is the 5-block partition of shape $(3, 3, 2, 2, 2)$ consisting of two interlaced equilateral triangles $t\_1 = \lbrace 4, 8, 12 \rbrace$ and $t\_2 = \lbrace 2, 6, 10 \rbrace$ (forming a regular hexagram) and three crossing diameters $d\_1 = \lbrace 1, 7 \rbrace$, $d\_2 = \lbrace 3, 9 \rbrace$, and $d\_3 = \lbrace 5, 11 \rbrace$. With 21 internal chord crossings, this mosaic admits the pentatonic transversal $G(1, (2, 2, 3, 2, 3)) = \lbrace 1, 3, 5, 8, 10 \rbrace$, selecting one vertex from each diameter and one from each equilateral triangle.
 
 ---
 
