@@ -63,7 +63,7 @@ Let $T(n)$ denote the total number of rooted isotypic composition transversals a
 For any $n \ge 1$:
 
 $$
-T(n) = n \sum_{\lambda \vdash n} (c_\lambda)^2 \binom{n - k}{\lambda_1 - 1, \, \lambda_2 - 1, \, \dots, \, \lambda_k - 1}
+T(n) = n \sum_{\lambda \vdash n} (c_\lambda)^2 \binom{n - k}{\lambda_1 - 1, \lambda_2 - 1, \dots, \lambda_k - 1}
 $$
 
 where:
@@ -77,7 +77,7 @@ $$
 - The multinomial coefficient distributes the remaining unassigned elements:
 
 $$
-\binom{n - k}{\lambda_1 - 1, \, \dots, \, \lambda_k - 1} = \frac{(n - k)!}{\prod_{j=1}^k (\lambda_j - 1)!}
+\binom{n - k}{\lambda_1 - 1, \dots, \lambda_k - 1} = \frac{(n - k)!}{\prod_{j=1}^k (\lambda_j - 1)!}
 $$
 
 ### Proof via Bipartite Incidence Duality
@@ -99,7 +99,7 @@ Fix an integer partition shape $\lambda \vdash n$ with $k = \ell(\lambda)$ parts
 8. The number of ways to partition $n - k$ elements into $k$ labelled blocks of capacities $(s\_1 - 1, \dots, s\_k - 1)$ is given by the multinomial coefficient:
 
 $$
-\binom{n - k}{s_1 - 1, \, \dots, \, s_k - 1} = \frac{(n - k)!}{\prod_{j=1}^k (s_j - 1)!} = \binom{n - k}{\lambda_1 - 1, \, \dots, \, \lambda_k - 1}
+\binom{n - k}{s_1 - 1, \dots, s_k - 1} = \frac{(n - k)!}{\prod_{j=1}^k (s_j - 1)!} = \binom{n - k}{\lambda_1 - 1, \dots, \lambda_k - 1}
 $$
 
 which is invariant under any reordering of $\lambda$.
@@ -107,7 +107,7 @@ which is invariant under any reordering of $\lambda$.
 Multiplying the independent factors for shape $\lambda$:
 
 $$
-T(\lambda) = n \cdot c_\lambda \cdot c_\lambda \cdot \binom{n - k}{\lambda_1 - 1, \, \dots, \, \lambda_k - 1} = n \, (c_\lambda)^2 \binom{n - k}{\lambda_1 - 1, \, \dots, \, \lambda_k - 1}
+T(\lambda) = n \cdot c_\lambda \cdot c_\lambda \cdot \binom{n - k}{\lambda_1 - 1, \dots, \lambda_k - 1} = n \, (c_\lambda)^2 \binom{n - k}{\lambda_1 - 1, \dots, \lambda_k - 1}
 $$
 
 Summing over all integer partitions $\lambda \vdash n$ completes the proof.
