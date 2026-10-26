@@ -40,7 +40,7 @@ $$
 Given an origin vertex $o \in \mathbb{Z}\_n$ and an isotypic composition $\gamma = (\gamma\_1, \dots, \gamma\_k)$, the prefix step sums generate a $k$-vertex cyclic polygon $G(o, \gamma) \subset \mathbb{Z}\_n$:
 
 $$
-G(o, \gamma) = \left\lbrace o + \sum_{j=1}^{r-1} \gamma_j \pmod n \;:\; 1 \le r \le k \right\rbrace
+G(o, \gamma) = \left\lbrace o + \sum_{j=1}^{r-1} \gamma_j \pmod n \;\middle|\; 1 \le r \le k \right\rbrace
 $$
 
 where indices in $\mathbb{Z}\_n$ are taken in $\lbrace 1, \dots, n \rbrace$. Because each $\gamma\_j \ge 1$ and $\sum\_{j=1}^k \gamma\_j = n$, the $k$ vertices of $G(o, \gamma)$ are distinct.
