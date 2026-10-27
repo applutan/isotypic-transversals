@@ -114,6 +114,22 @@ $$
 
 Summing over all integer partitions $\lambda \vdash n$ completes the proof.
 
+### The Everted Transversal Bouquet: Visual Anatomy of the Theorem
+
+The algebraic structure of the Enumeration Theorem can be visualized directly as an **everted transversal bouquet**, turning the container inside out:
+
+<p align="center">
+  <img src="img/fig12_bouquet_duality.png" width="780" alt="Everted Transversal Bouquet Duality" />
+</p>
+
+**Figure 2**: Closed container representation (left) versus the everted transversal bouquet (right) on $\mathbb{Z}_{12}$.
+
+Each factor of the formula corresponds to a physical geometric layer of the bouquet:
+1. **The Origin Factor ($n$)**: The $n$ cyclic rotations of the central shell.
+2. **The First Permutation Factor ($c_\lambda$) — Central Polygon Strides**: The cyclic composition $\gamma = (\gamma_1, \dots, \gamma_k) \vDash n$ of type $\lambda$, defining the shaded central polygon with edge lengths $(3, 4, 5)$ marked by circled badges at the edge midpoints.
+3. **The Second Permutation Factor ($c_\lambda$) — Internal Routing Arrows**: The straight arrows directed from the midpoint size badges to the connection vertices ($3, 6, 10$). These define the size-assignment bijection $\pi: \text{Edges}(G) \to \text{Vertices}(G)$ without crossing edges of the same weight.
+4. **The Container Multinomial $\binom{n-k}{\lambda_1-1, \dots}$ — Outer Leaf Petals**: The $n - k$ unassigned elements of $\mathbb{Z}_n$ populating the outer satellite shells, which rotate $180^\circ$ around their connection vertices to display the constituent blocks in their natural cyclic coordinates.
+
 ---
 
 ## 3. Geometric Structures and Obstructions
@@ -188,11 +204,11 @@ An exemplar of maximum interior chord intersection is the 5-block partition of s
 
 ## 4. Sequence Values and the Partition Obstruction Landscape
 
-The total number of rooted isotypic composition transversals $T(n)$ is established by the closed-form Enumeration Theorem (Section 2) and evaluates in milliseconds.
+This repository supports two complementary integer sequences for the On-Line Encyclopedia of Integer Sequences (OEIS):
+1. **The Analytical Sequence $T(n)$** (`%K nonn,easy`): Total rooted isotypic composition transversals across all set partitions of $\mathbb{Z}_n$, established analytically by the closed-form Enumeration Theorem (Section 2) and evaluating in milliseconds.
+2. **The Obstruction Sequence $Z(n)$** (`%K nonn,hard`): The number of set partitions of $\mathbb{Z}_n$ admitting zero transversals, discovered empirically via exhaustive combinatorial lattice search.
 
-However, the closed formula is completely blind to the distribution of transversals across individual set partitions. In particular, it cannot determine whether every set partition admits at least one transversal, nor can it predict which partitions are obstructed.
-
-To investigate this structural question, an exhaustive census across all $B_n$ set partitions was executed through $n = 16$. This computation evaluated over **$12.08\text{ billion}$ partitions**, discovering the exact obstruction counts $Z(n)$ (partitions admitting zero transversals):
+While $T(n)$ is determined in closed form, the formula is completely blind to individual partitions. To map the obstruction landscape $Z(n)$, an exhaustive census across all $B_n$ set partitions was executed through $n = 16$, evaluating over **$12.08\text{ billion}$ partitions**:
 
 | $n$ | Classification | Partitions $B_n$ | Rooted Transversals $T(n)$ | Zero-Sol Partitions $Z(n)$ | Zero % |
 |:---:|:---|---:|---:|---:|:---:|
