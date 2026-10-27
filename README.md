@@ -54,6 +54,32 @@ $$
 
 The pair $(o, \gamma)$ is termed a **rooted isotypic composition transversal** of $\mathcal{M}$.
 
+### Combinatorial Context and Literature Precursors
+
+The concept of a transversal (or System of Distinct Representatives, SDR) has a rich history across discrete mathematics, against which the specific geometry of isotypic composition transversals can be situated:
+
+1. **Classical Systems of Distinct Representatives (Hall, Rota, Mirsky)**:  
+   In classical transversal theory and matroid theory (Hall's Marriage Theorem, 1935; Rota, 1964; Mirsky, 1971), a transversal of a family of subsets requires only that each subset contributes one representative. For a set partition $\mathcal{M} = \lbrace m_1, \dots, m_k \rbrace$ where blocks are mutually disjoint, Hall's condition holds trivially, and the number of unconstrained transversals is simply the product of block cardinalities:
+   $N_{\mathrm{classical}} = \prod_{i=1}^k |m_i| = \prod_{j=1}^k \lambda_j$.
+   In this classical setting, every partition trivially admits solutions, and obstructions cannot exist.
+
+2. **Coset Transversals in Group Theory**:  
+   In abstract group theory, transversals of group partitions are studied primarily when the partition consists of the cosets of a subgroup $H \le \mathbb{Z}_n$. This classical setting is restricted to uniform partition shapes $(d^{n/d})$ and does not consider non-uniform partition shapes $\lambda \vdash n$ or cyclic step sequence orderings.
+
+3. **Latin Square and Cayley Table Transversals (Hall–Paige Conjecture)**:  
+   A celebrated transversal problem in group theory concerns transversals in the Cayley table of a finite group (the Hall–Paige conjecture, formulated in 1955 and proved by Wilcox, Evans, and Bray in 2009). These transversals represent selections in a two-dimensional multiplication table rather than 1D cyclic polygon embeddings.
+
+4. **Additive Combinatorics (Snevily's Conjecture & Arsovski's Theorem)**:  
+   Snevily's conjecture (1999, proved by Bodan Arsovski in 2011) establishes that for two subsets $A, B \subset \mathbb{Z}_n$ of equal cardinality $k$ ($n$ odd), there exists a bijection $\pi \colon A \to B$ whose sums $a + \pi(a)$ are distinct. While addressing cyclic groups, it studies pairwise subset addition rather than the global partitioning of the lattice.
+
+5. **Independent Transversals in Hypergraphs (Alon, Loh, Sudakov)**:  
+   In extremal combinatorics, an independent transversal is a transversal that forms an independent set in a supporting graph (Alon, 1994; Loh and Sudakov, 2008). This is a graph-colouring condition without metric cyclic step requirements.
+
+**The Isotypic Difference**:  
+In an **isotypic composition transversal**, the transversal is constrained to be an inscribed cyclic polygon $G(o, \gamma) \subset \mathbb{Z}_n$ whose cyclic stride differences $(\gamma_1, \dots, \gamma_k)$ must form an exact permutation of the block cardinalities $(|m_1|, \dots, |m_k|)$. This metric and algebraic coupling to the underlying partition capacities introduces rigid modular constraints:
+- **Obstructions $Z(n)$**: Stride-resonance coset trapping, parity deficits on bipartite sub-lattices, and metric distance spectrum gaps can completely forbid any valid transversal, producing the non-trivial obstruction landscape $Z(n)$.
+- **Closed-Form Counting $T(n)$**: Despite individual obstructions, reversing summation order via bipartite incidence duality completely decouples the metric geometry in aggregate, yielding the exact closed-form Enumeration Theorem.
+
 ---
 
 ## 2. The Enumeration Theorem
