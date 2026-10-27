@@ -167,7 +167,7 @@ On finite cyclic lattices, transversal realisability is governed by the interpla
 
 ### Prime Lattices: Universal Realisability at Small Orders
 
-On $\mathbb{Z}\_3$ and $\mathbb{Z}\_5$, 100% of all set partitions admit at least one valid transversal. Step distances cannot be trapped in sub-lattice cosets.
+On $\mathbb{Z}\_3$ and $\mathbb{Z}\_5$, 100% of all set partitions admit at least one valid transversal. Step distances cannot be trapped in sub-lattice cosets. Furthermore, $\mathbb{Z}\_5$ represents the maximal cyclic lattice where universal realisability ($Z(5) = 0$) and total bilateral reversibility ($N^C = N^\tau = N^D$) coexist in complete harmony: every transversal polygon and constituent partition block is strictly reflection-symmetric (rendered exclusively in serene blue), before chirality emerges and turns the combinatorial universe pink at $\mathbb{Z}\_6$.
 
 <p align="center">
   <img src="img/fig2_z3_geometry.png" width="380" alt="Z3 Forbidden Origin" />
@@ -176,10 +176,10 @@ On $\mathbb{Z}\_3$ and $\mathbb{Z}\_5$, 100% of all set partitions admit at leas
 **Figure 3**: The forbidden origin on $\mathbb{Z}\_3$ for partition shape $(2, 1)$.
 
 <p align="center">
-  <img src="img/fig4_z5_geometry.png" width="380" alt="Z5 Universal Realisability" />
+  <img src="img/fig4_z5_geometry.png" width="760" alt="Z5 Universal Realisability and Efflorescent Bouquet" />
 </p>
 
-**Figure 4**: Universal transversal realisability on $\mathbb{Z}\_5$ for shape $(2, 2, 1)$.
+**Figure 4**: Universal transversal realisability and bilateral reflection symmetry on $\mathbb{Z}\_5$ for canonical partition $/1/23/45/$ of shape $(2, 2, 1)$: closed container (left) alongside its everted transversal bouquet (right) exhibiting exflorescing digonal petals $\lbrace 2, 3 \rbrace$ and $\lbrace 4, 5 \rbrace$ and the singleton $\lbrace 1 \rbrace$.
 
 ### Composite and Prime-Power Obstructions
 
