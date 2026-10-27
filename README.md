@@ -200,6 +200,35 @@ On the dodecagonal lattice $\mathbb{Z}\_{12}$, the strictly decreasing partition
 
 An exemplar of maximum interior chord intersection is the 5-block partition of shape $(3, 3, 2, 2, 2)$ consisting of two interlaced equilateral triangles $t\_1 = \lbrace 4, 8, 12 \rbrace$ and $t\_2 = \lbrace 2, 6, 10 \rbrace$ (forming a regular hexagram) and three crossing diameters $d\_1 = \lbrace 1, 7 \rbrace$, $d\_2 = \lbrace 3, 9 \rbrace$, and $d\_3 = \lbrace 5, 11 \rbrace$. With 21 internal chord crossings, this mosaic admits the pentatonic transversal $G(1, (2, 2, 3, 2, 3)) = \lbrace 1, 3, 5, 8, 10 \rbrace$, selecting one vertex from each diameter and one from each equilateral triangle.
 
+### Complete Solution Catalogues ($n \le 5$) and the $\mathbb{Z}_6$ Landscape
+
+To observe how transversals behave across complete configuration spaces, set partitions are classified under the dihedral symmetry group $D_n$. Partitions belonging to the same dihedral orbit share identical transversal spectra.
+
+The complete configuration space for orders $n = 1, 2, 3, 4, 5$ comprises exactly **25 dihedral mosaic orbits** ($1 + 2 + 3 + 7 + 12 = 25$), illustrated in full below:
+
+<p align="center">
+  <img src="img/fig_catalogue_n1_to_n5.png" width="900" alt="Complete Catalogue of Dihedral Mosaic Orbits and Transversals for n=1..5" />
+</p>
+
+**Figure 10**: Complete catalogue of all 25 dihedral mosaic orbits on $\mathbb{Z}_1 \dots \mathbb{Z}_5$. Solvable mosaics display their primal blocks with a rooted composition transversal (dashed red); the unique obstruction on $\mathbb{Z}_4$ (Orbit 4, accounting for $Z(4) = 1$) is highlighted by a red cross.
+
+Key observations across the first five orders:
+- **$\mathbb{Z}_1, \mathbb{Z}_2, \mathbb{Z}_3$ (6 orbits, 8 partitions)**: Universal realisability ($Z=0$); every mosaic admits rooted transversals.
+- **$\mathbb{Z}_4$ (7 orbits, 15 partitions)**: The first structural obstruction in modular transversal geometry emerges at Orbit 4: the alternating coset partition $/13/24/$ of shape $(2, 2)$ has zero transversals ($Z(4) = 1$), while the remaining 6 orbits are completely solvable.
+- **$\mathbb{Z}_5$ (12 orbits, 52 partitions)**: Universal realisability returns ($Z(5) = 0$); all 12 dihedral orbits admit valid transversals, totaling $T(5) = 305$ rooted solutions.
+
+#### The 37 Dihedral Mosaics on $\mathbb{Z}_6$ (Full Poster)
+
+On the hexagonal lattice $\mathbb{Z}_6$, the $B_6 = 203$ set partitions expand into **37 dihedral orbits**. While too extensive to embed directly in the main summary, the complete classification is available as a high-resolution poster:
+
+- 🔍 **[High-Resolution Poster: The 37 Dihedral Mosaic Orbits on Z_6](img/catalogue_z6_37mosaics.png)**
+
+In this poster, the 33 solvable orbits (189 partitions) display their primal block colourings and rooted composition transversals, while the **4 obstruction orbits** (14 partitions, establishing $Z(6) = 14$) are explicitly identified:
+1. **Orbit 8** (shape $(4, 1, 1)$, mass 3, $/1/2356/4/$): Metric distance gap omission (antipodal singletons require distance 3, absent from the $(4, 1, 1)$ triangle spectrum).
+2. **Orbit 20** (shape $(3, 1, 1, 1)$, mass 2, $/1/246/3/5/$): Parity-alternation deficit on the bipartite sub-lattice.
+3. **Orbit 22** (shape $(2, 2, 2)$, mass 6, $/12/35/46/$): Stride-resonance coset misalignment.
+4. **Orbit 23** (shape $(2, 2, 2)$, mass 3, $/13/25/46/$): Crossing dyad parity trapping.
+
 ---
 
 ## 4. Sequence Values and the Partition Obstruction Landscape
