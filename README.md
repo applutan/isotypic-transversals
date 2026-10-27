@@ -130,6 +130,9 @@ Each factor of the formula corresponds to a physical geometric layer of the bouq
 3. **The Second Permutation Factor ($c_\lambda$) — Internal Routing Arrows**: The straight arrows directed from the midpoint size badges to the connection vertices ($3, 6, 10$). These define the size-assignment bijection $\pi: \text{Edges}(G) \to \text{Vertices}(G)$ without crossing edges of the same weight.
 4. **The Container Multinomial $\binom{n-k}{\lambda_1-1, \dots}$ — Outer Leaf Petals**: The $n - k$ unassigned elements of $\mathbb{Z}_n$ populating the outer satellite shells, which rotate $180^\circ$ around their connection vertices to display the constituent blocks in their natural cyclic coordinates.
 
+> [!NOTE]
+> **TL;DR (Visual Anatomy)**: In the diagram above, the **white discs** account for all elements in the set being partitioned—in **(a)** as the ambient ground set $\mathbb{Z}_n$, and in **(b)** as the constituent partition blocks unfolded into satellite leaf petals. The **tinted discs** sit at chord midpoints and account, one-to-one, for all subset sizes in the partition. The tinting reflects geometric symmetry: **blue discs** (`mosaicblue`) mark subsets of symmetric part sizes (self-reversible step lengths, such as stride 3), while **pink discs** (`mosaicpink`) mark subsets of chiral part sizes (asymmetric strides, such as lengths 4 and 5).
+
 ---
 
 ## 3. Geometric Structures and Obstructions
