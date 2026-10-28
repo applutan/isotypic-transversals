@@ -258,6 +258,33 @@ In this poster, the 33 solvable orbits (189 partitions) display their primal blo
 3. **Orbit 22** (shape $(2, 2, 2)$, mass 6, $/12/35/46/$): Stride-resonance coset misalignment.
 4. **Orbit 23** (shape $(2, 2, 2)$, mass 3, $/13/25/46/$): Crossing dyad parity trapping.
 
+#### Dihedral Orbit Equivalence and OEIS A084708
+
+The sequence counting the total number of dihedral mosaic orbits on $\mathbb{Z}\_n$ corresponds to **[OEIS A084708](https://oeis.org/A084708)** (number of set partitions up to rotations and reflections):
+
+$$\text{A084708}(n) = [1,\, 2,\, 3,\, 7,\, 12,\, 37,\, 93,\, 354,\, 1350,\, 6351,\, \dots]$$
+
+While A084708 counts the total number of distinct geometric figures that can be drawn on $\mathbb{Z}\_n$, modular transversal realisability partitions these figures into **solvable orbits** $O\_{\mathrm{sol}}(n)$ and **obstruction orbits** $O\_{\mathrm{obs}}(n)$:
+
+| $n$ | Partitions $B\_n$ | Dihedral Orbits (A084708) | Zero-Sol Partitions $Z(n)$ | Zero-Sol Orbits $O\_{\mathrm{obs}}(n)$ | Solvable Orbits $O\_{\mathrm{sol}}(n)$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1 | 1 | 1 | 0 | 0 | 1 |
+| 2 | 2 | 2 | 0 | 0 | 2 |
+| 3 | 5 | 3 | 0 | 0 | 3 |
+| 4 | 15 | 7 | 1 | 1 | 6 |
+| 5 | 52 | 12 | 0 | 0 | 12 |
+| 6 | 203 | 37 | 14 | 4 | 33 |
+| 7 | 877 | 93 | 49 | 7 | 86 |
+| 8 | 4,140 | 354 | 300 | 41 | 313 |
+
+Crucially, the raw zero-solution partitions $Z(n)$ collapse into a much smaller, highly structured set of obstruction orbits:
+- On $\mathbb{Z}\_4$, the single obstruction partition has orbit mass 1 ($Z(4) = 1$).
+- On $\mathbb{Z}\_6$, all 14 obstruction partitions collapse into just 4 dihedral orbits (masses $3 + 6 + 3 + 2 = 14$).
+- On $\mathbb{Z}\_7$, all 49 obstruction partitions collapse into 7 dihedral orbits (each of mass 7, giving $7 \times 7 = 49$).
+- On $\mathbb{Z}\_8$, the 300 obstruction partitions collapse into 41 dihedral orbits.
+
+The resulting sequences of **solvable dihedral orbits** $O\_{\mathrm{sol}}(n) = [1, 2, 3, 6, 12, 33, 86, 313, \dots]$ and **obstruction dihedral orbits** $O\_{\mathrm{obs}}(n) = [0, 0, 0, 1, 0, 4, 7, 41, \dots]$ are entirely absent from the OEIS.
+
 ---
 
 ## 4. Sequence Values and the Partition Obstruction Landscape
@@ -279,7 +306,7 @@ While $T(n)$ is determined in closed form, the formula is completely blind to in
 | 5 | Prime | 52 | 305 | 0 | $0.00\%$ |
 | 6 | Composite $(2 \cdot 3)$ | 203 | 1,584 | 14 | $6.90\%$ |
 | 7 | Prime | 877 | 8,302 | 49 | $5.59\%$ |
-| 8 | Prime&nbsp;Power $(2^3)$ | 4,140 | 48,232 | 332 | $8.02\%$ |
+| 8 | Prime&nbsp;Power $(2^3)$ | 4,140 | 48,232 | 300 | $7.25\%$ |
 | 9 | Prime&nbsp;Power $(3^2)$ | 21,147 | 304,335 | 1,591 | $7.52\%$ |
 | 10 | Composite $(2 \cdot 5)$ | 115,975 | 2,056,440 | 9,402 | $8.11\%$ |
 | 11 | Prime | 678,570 | 14,609,738 | 54,978 | $8.10\%$ |
