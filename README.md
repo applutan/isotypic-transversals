@@ -211,7 +211,7 @@ On higher-order lattices, non-uniform partitions with $k \ge 4$ blocks exhibit r
 
 **Figure 7**: Closed container representation (left) versus everted transversal bouquet (right) on $\mathbb{Z}\_8$.
 
-On the octagonal lattice $\mathbb{Z}\_8$, the 4-block partition $\mathcal{M} = \lbrace \lbrace 1, 2, 3 \rbrace, \lbrace 4, 5 \rbrace, \lbrace 6, 7 \rbrace, \lbrace 8 \rbrace \rbrace$ of shape $(3, 2, 2, 1)$ decomposes the circle into an arc of 3 vertices $m\_1$, two 2-vertex chords $m\_2$ and $m\_3$, and a singleton $m\_4$. The composition transversal $G(1, (3, 2, 2, 1)) = \lbrace 1, 4, 6, 8 \rbrace$ traces cyclic steps $(3, 2, 2, 1)$. In the everted transversal bouquet (right), the central quadrilateral routes its edge strides via internal coupling arrows: stride 3 connects to triangle petal $\lbrace 1, 2, 3 \rbrace$ at root 1, strides of length 2 connect to roots 4 and 6 where **exflorescing digonal petals** unfold outward into lens-shaped petals, and stride 1 connects to root 8 as an atomic singleton.
+On the octagonal lattice $\mathbb{Z}\_8$, the 4-block partition $\mathcal{M} = /123/45/67/8/$ of shape $(3, 2^2, 1)$ decomposes the circle into an arc of 3 vertices $m\_1$, two 2-vertex chords $m\_2$ and $m\_3$, and a singleton $m\_4$. The composition transversal $G(1, (3221)) = \lbrace 1, 4, 6, 8 \rbrace$ traces cyclic steps $(3, 2, 2, 1)$. In the everted transversal bouquet (right), the central quadrilateral routes its edge strides via internal coupling arrows: stride 3 connects to triangle petal $\lbrace 1, 2, 3 \rbrace$ at root 1, strides of length 2 connect to roots 4 and 6 where **efflorescing digonal petals** unfold outward as straight metric chords, and stride 1 connects to root 8 as an atomic singleton badge.
 
 <p align="center">
   <img src="img/fig7_z12_geometry.png" width="580" alt="Z12 Four-Block Geometry" />
@@ -245,6 +245,17 @@ Key observations across the first five orders:
 - **$\mathbb{Z}_1, \mathbb{Z}_2, \mathbb{Z}_3$ (6 orbits, 8 partitions)**: Universal realisability ($Z=0$); every mosaic admits rooted transversals.
 - **$\mathbb{Z}_4$ (7 orbits, 15 partitions)**: The first structural obstruction in modular transversal geometry emerges at Orbit 4: the alternating coset partition $/13/24/$ of shape $(2, 2)$ has zero transversals ($Z(4) = 1$), while the remaining 6 orbits are completely solvable.
 - **$\mathbb{Z}_5$ (12 orbits, 52 partitions)**: Universal realisability returns ($Z(5) = 0$); all 12 dihedral orbits admit valid transversals, totaling $T(5) = 305$ rooted solutions.
+
+#### The 12-Bloom Universe on $\mathbb{Z}_5$ (Everted Transversal Bouquets)
+
+For the pentagonal lattice $\mathbb{Z}_5$—the boundary of universal dihedral reflection symmetry—each of the 12 dihedral orbits unfolds into a canonical everted bouquet, displaying the full progression from unigon ($k=1$) to 5-gon ($k=5$):
+
+<p align="center">
+  <img src="img/chart_z5_12_efflorescences_labelled.png" width="900" alt="The 12-Bloom Transversal Universe on Z5 (Labelled)" />
+</p>
+
+- 🌸 **[High-Resolution Art Poster: The 12 Unlabelled Z_5 Blooms](img/chart_z5_12_efflorescences.png)**
+- 🏷️ **[High-Resolution Technical Poster: The 12 Labelled Z_5 Blooms](img/chart_z5_12_efflorescences_labelled.png)**
 
 #### The 37 Dihedral Mosaics on $\mathbb{Z}_6$ (Full Poster)
 
