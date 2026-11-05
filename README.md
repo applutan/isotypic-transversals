@@ -356,11 +356,11 @@ Crucially, the raw zero-solution partitions $Z(n)$ collapse into a much smaller,
 
 ## 4. Sequence Values, Asymptotic Scaling, and the Complete Census
 
-This repository supports integer sequences for the On-Line Encyclopedia of Integer Sequences (OEIS):
-1. **The Canonical Sequence $K(n)$** (`%K nonn,easy`): Canonical isotypic composition transversals across all set partitions of $\mathbb{Z}\_n$, established analytically by the Enumeration Theorem and evaluating in milliseconds.
-2. **The Transversal Triangle $R(n, k)$** (`%K tabl,easy`): $k$-block graded canonical transversals.
+This repository supports integer sequences submitted to the On-Line Encyclopedia of Integer Sequences (OEIS):
+1. **The Canonical Sequence $K(n)$** ([OEIS A401780](https://oeis.org/A401780)): Canonical isotypic composition transversals across all set partitions of $\mathbb{Z}\_n$, established analytically by the Enumeration Theorem and evaluating in milliseconds.
+2. **The Transversal Triangle $R(n, k)$**: $k$-block graded canonical transversals.
 3. **The Rooted Microstate Volume $T(n) = n \cdot K(n)$**: Total rooted transversals across all cyclic origins.
-4. **The Obstruction Sequence $Z(n)$** (`%K nonn,hard`): The number of set partitions of $\mathbb{Z}\_n$ admitting zero isotypic transversals, discovered empirically via exhaustive combinatorial lattice search.
+4. **The Obstruction Sequence $Z(n)$** ([OEIS A401781](https://oeis.org/A401781)): The number of set partitions of $\mathbb{Z}\_n$ admitting zero isotypic transversals, discovered empirically via exhaustive combinatorial lattice search.
 
 ### Asymptotic Scaling Law: Super-Polynomial Divergence of K(n) over B(n)
 
