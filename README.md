@@ -309,7 +309,7 @@ On the octagonal lattice $\mathbb{Z}\_8$, the 4-block partition $\mathcal{M} = /
 
 **Figure 8**: Non-uniform 4-block partition and dual transversal quadrilateral on $\mathbb{Z}\_{12}$.
 
-On the dodecagonal lattice $\mathbb{Z}\_{12}$, the strictly decreasing partition shape $(6, 3, 2, 1)$ decomposes the lattice into a semicircle 6-block $m\_1 = \{1, \dots, 6\}$, a 3-block $m\_2 = \{7, 8, 9\}$, a 2-block $m\_3 = \{10, 11\}$, and a singleton $m\_4 = \{12\}$. The transversal $G(1, (6, 3, 2, 1)) = \{1, 7, 10, 12\}$ spans the vertical diameter $1 \to 7$ (distance 6) followed by steps of length 3, 2, and 1, visiting every block exactly once.
+On the dodecagonal lattice $\mathbb{Z}\_{12}$, the strictly decreasing partition shape $(6, 3, 2, 1)$ decomposes the lattice into a semicircle 6-block $m\_1 = \{1, \dots, 6\}$, a 3-block $m\_2 = \{7, 8, 9\}$, a 2-block $m\_3 = \{10, 11\}$, and a singleton $m\_4 = \{12\}$. The transversal $G(1, (6, 3, 2, 1)) = \{1, 7, 10, 12\}$ spans the vertical diameter $1 \to 7$ (distance 6) followed by steps of length 3, 2, and 1, visiting every block exactly once. We should also be able to see that if we turn the red-dashed quadrilateral clockwise by one vertex, we maintain the isotypic transversality with the new subset $\{ 6, 9, 11, 12 \}$.
 
 <p align="center">
   <img src="img/fig8_z12_pentatonic_hexagram.png" width="580" alt="Intersecting Pentatonic Mosaic on Z12" />
