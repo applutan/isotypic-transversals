@@ -62,18 +62,18 @@ For an individual labeled partition $\mathcal{M}$, the number of valid pairs $(o
 However, summing $T(\mathcal{M})$ over cyclic orbits or across all partitions of shape $\lambda \vdash n$ means it must be an exact multiple of $n$. We define the **canonical (unoriented) transversal count** as:
 
 $$
-S^\star(\lambda) = \frac{T(\lambda)}{n}
+R(\lambda) = \frac{T(\lambda)}{n}
 $$
 
-Summing $S^\star(\lambda)$ over all partitions of length $k$ gives **striding numbers** $S^\star(n, k)$, and summing over all $k \in \{1, \dots, n\}$ yields the total canonical transversal count:
+Summing $R(\lambda)$ over all partitions of length $k$ gives the canonical transversal numbers $R(n, k)$, and summing over all $k \in \{1, \dots, n\}$ yields the total canonical transversal count:
 
 $$
-K(n) = \sum_{k=1}^n S^\star(n, k) = \frac{T(n)}{n}
+K(n) = \sum_{k=1}^n R(n, k) = \frac{T(n)}{n}
 $$
 
 ### Combinatorial Context and Literature Precursors
 
-The concept of a transversal (or System of Distinct Representatives, SDR) has history across discrete mathematics, against which the specific geometry of isotypic composition transversals can be situated:
+The concept of a transversal (or System of Distinct Representatives, SDR) has a long history across discrete mathematics, against which the specific geometry of isotypic composition transversals can be situated:
 
 1. **Classical Systems of Distinct Representatives (Hall, Rota, Mirsky)**:  
    In classical transversal theory and matroid theory (Hall's Marriage Theorem, 1935; Rota, 1964; Mirsky, 1971), a transversal of a family of subsets requires only that each subset contributes one representative. For a set partition $\mathcal{M} = \{m_1, \dots, m_k\}$ where blocks are mutually disjoint, Hall's condition holds trivially, and the number of unconstrained transversals is simply the product of block cardinalities: $N_{\mathrm{classical}} = \prod_{i=1}^k |m_i| = \prod_{j=1}^k \lambda_j$. Every partition trivially admits solutions, and obstructions cannot exist.
@@ -82,7 +82,7 @@ The concept of a transversal (or System of Distinct Representatives, SDR) has hi
    In abstract group theory, transversals of group partitions are studied primarily when the partition consists of the cosets of a subgroup $H \le \mathbb{Z}\_n$. This classical setting is thus restricted to *uniform* partition shapes $(d^{n/d})$ and does not consider non-uniform partition shapes $\lambda \vdash n$ or cyclic step sequence orderings.
 
 3. **Latin Square and Cayley Table Transversals (Hall–Paige Conjecture)**:  
-   A well-known transversal problem in group theory concerns transversals in the Cayley table of a finite group (the Hall–Paige conjecture - formulated in 1955 - proved by Wilcox, Evans, and Bray in 2009). These transversals represent selections in a two-dimensional multiplication table rather than 1D cyclic polygon embeddings.
+   A well-known transversal problem in group theory concerns transversals in the Cayley table of a finite group (the Hall–Paige conjecture, formulated in 1955 and proved by Wilcox, Evans, and Bray in 2009). These transversals represent selections in a two-dimensional multiplication table rather than 1D cyclic polygon embeddings.
 
 4. **Additive Combinatorics (Snevily's Conjecture & Arsovski's Theorem)**:  
    Snevily's conjecture (1999, proved by Bodan Arsovski in 2011) establishes that for two subsets $A, B \subset \mathbb{Z}\_n$ of equal cardinality $k$ ($n$ odd), there's a bijection $\pi \colon A \to B$ whose sums $a + \pi(a)$ are distinct. While addressing cyclic groups, it studies pairwise subset addition rather than the global lattice partitioning.
@@ -97,20 +97,20 @@ In an **isotypic composition transversal**, the transversal is constrained to be
 
 ---
 
-## 2. The Closed-Form Enumeration Theorem and the Striding Triangle
+## 2. The Closed-Form Enumeration Theorem and the Transversal Triangle
 
 ### Theorem
 
 For any finite cyclic lattice $\mathbb{Z}\_n$, the total number of canonical (origin-fixed) isotypic composition transversals across all set partitions $\mathcal{M}$ of $\mathbb{Z}\_n$ is given by the exact closed-form expression:
 
 $$
-K(n) = \sum_{k=1}^n S^\star(n, k)
+K(n) = \sum_{k=1}^n R(n, k)
 $$
 
-where $S^\star(n, k)$ grade canonical transversals by block count $k = \ell(\lambda)$:
+where the transversal numbers $R(n, k)$ grade canonical transversals by block count $k = \ell(\lambda)$:
 
 $$
-S^\star(n, k) = \sum_{\substack{\lambda \vdash n \\ \ell(\lambda) = k}} (c_\lambda)^2 \binom{n - k}{\lambda_1 - 1, \lambda_2 - 1, \dots, \lambda_k - 1}
+R(n, k) = \sum_{\substack{\lambda \vdash n \\ \ell(\lambda) = k}} (c_\lambda)^2 \binom{n - k}{\lambda_1 - 1, \lambda_2 - 1, \dots, \lambda_k - 1}
 $$
 
 with the summation running over all integer partitions $\lambda = (1^{m_1} 2^{m_2} \dots n^{m_n}) \vdash n$ of length $k = \sum m_i$, and:
@@ -148,10 +148,10 @@ $$
 Multiplying the independent factors for shape $\lambda$:
 
 $$
-S^\star(\lambda) = c_\lambda \cdot c_\lambda \cdot \binom{n - k}{\lambda_1 - 1, \dots, \lambda_k - 1} = (c_\lambda)^2 \binom{n - k}{\lambda_1 - 1, \dots, \lambda_k - 1}
+R(\lambda) = c_\lambda \cdot c_\lambda \cdot \binom{n - k}{\lambda_1 - 1, \dots, \lambda_k - 1} = (c_\lambda)^2 \binom{n - k}{\lambda_1 - 1, \dots, \lambda_k - 1}
 $$
 
-Summing over all integer partitions $\lambda \vdash n$ of length $k$ yields $S^\star(n, k)$, and summing over all $k$ yields $K(n)$.
+Summing over all integer partitions $\lambda \vdash n$ of length $k$ yields $R(n, k)$, and summing over all $k$ yields $K(n)$.
 
 ### The Everted Transversal Bouquet: Visual Anatomy of the Theorem
 
@@ -174,9 +174,9 @@ Each factor of the formula corresponds to a physical geometric layer of the bouq
 
 ---
 
-### The Striding Triangle S*(n, k)
+### The Canonical Transversal Triangle R(n, k)
 
-Evaluating $S^\star(n, k)$ across small lattice orders generates the **Striding Triangle**, the canonical isotypic transversal analog of the Stirling numbers of the second kind:
+Evaluating $R(n, k)$ across small lattice orders generates the canonical transversal triangle:
 
 | $n$ | $k=1$ | $k=2$ | $k=3$ | $k=4$ | $k=5$ | $k=6$ | $k=7$ | $k=8$ | $K(n)$ | **Bell** $B_n$ |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -191,63 +191,63 @@ Evaluating $S^\star(n, k)$ across small lattice orders generates the **Striding 
 | **9** | 1 | 256 | 3,186 | 11,520 | 12,852 | 5,040 | 916 | 64 | **33,815** | 21,147 |
 | **10** | 1 | 442 | 9,993 | 49,664 | 82,125 | 46,656 | 13,825 | 1,584 | **205,644** | 115,975 |
 
-### Boundary Laws of the Striding Triangle
+### Boundary Laws of the Transversal Triangle
 
-The boundary columns and diagonals of the Striding Triangle admit exact closed-form expressions:
+The boundary columns and diagonals of the transversal triangle admit exact closed-form expressions:
 
 1. **Monolithic Block** ($k = 1$):
 
 $$
-S^\star(n, 1) = 1 = \left\{ \begin{matrix} n \\ 1 \end{matrix} \right\}
+R(n, 1) = 1 = {n \brace 1}
 $$
 
 2. **All Singletons** ($k = n$):
 
 $$
-S^\star(n, n) = 1 = \left\{ \begin{matrix} n \\ n \end{matrix} \right\}
+R(n, n) = 1 = {n \brace n}
 $$
 
 3. **Single Digon** ($k = n - 1$):
 
 $$
-S^\star(n, n - 1) = (n - 1)^2
+R(n, n - 1) = (n - 1)^2
 $$
 
 4. **Dyadic Compositions** ($k = 2$):
 
 $$
-S^\star(n, 2) = \begin{cases} 2^{n-1} & \text{if } n \text{ is odd} \\ 2^{n-1} - \displaystyle\binom{n-2}{n/2 - 1} & \text{if } n \text{ is even} \end{cases}
+R(n, 2) = \begin{cases} 2^{n-1} & \text{if } n \text{ is odd} \\ 2^{n-1} - \displaystyle\binom{n-2}{n/2 - 1} & \text{if } n \text{ is even} \end{cases}
 $$
 
 5. **Digon-Pair Boundary** ($k = n - 2$):
 
 $$
-S^\star(n, n - 2) = (n - 2)^2 \left[ 1 + \frac{(n - 3)^2}{2} \right]
+R(n, n - 2) = (n - 2)^2 \left[ 1 + \frac{(n - 3)^2}{2} \right]
 $$
 
 ### Strict Log-Concavity, Unimodality, and the Parity-Weaving Law
 
-The Striding numbers $S^\star(n, k)$ share the unimodal characteristics of Stirling numbers while exhibiting a distinct parity-dependent interlacing:
+The transversal numbers $R(n, k)$ share the unimodal characteristics of Stirling numbers while exhibiting a distinct parity-dependent interlacing:
 
 1. **Strict Log-Concavity**: For all $n \ge 1$ and $1 < k < n$:
 
 $$
-S^\star(n, k)^2 > S^\star(n, k-1) \cdot S^\star(n, k+1)
+R(n, k)^2 > R(n, k-1) \cdot R(n, k+1)
 $$
 
-Every quotient $S^\star(n, k)^2 / [S^\star(n, k-1) S^\star(n, k+1)]$ is strictly $> 1$. Consequently, the sequence $k \mapsto S^\star(n, k)$ is **strictly unimodal**, possessing a unique maximum with no local dips.
+Every quotient $R(n, k)^2 / [R(n, k-1) R(n, k+1)]$ is strictly $> 1$. Consequently, the sequence $k \mapsto R(n, k)$ is **strictly unimodal**, possessing a unique maximum with no local dips.
 
-2. **Rightward Mode Shift**: The modal block count $k^\star\_{\max}(n) = \mathrm{argmax}\_k S^\star(n, k)$ satisfies $k^\star\_{\max}(n) \ge k\_{\mathrm{Stir}}(n)$, shifting rightward by $+1$ across lattice orders such as $n \in \{4, 9, 12, 15, 17, 21, 24\}$. This is driven by the quadratic composition factor $c\_\lambda^2 = (k! / \prod m\_i!)^2$, which systematically elevates partitions with large block counts $k$.
+2. **Rightward Mode Shift**: The modal block count $k\_{\max}(n) = \mathrm{argmax}\_k R(n, k)$ satisfies $k\_{\max}(n) \ge k\_{\mathrm{Stir}}(n)$, shifting rightward by $+1$ across lattice orders such as $n \in \{4, 9, 12, 15, 17, 21, 24\}$. This is driven by the quadratic composition factor $c\_\lambda^2 = (k! / \prod m\_i!)^2$, which systematically elevates partitions with large block counts $k$.
 
 3. **The Parity-Weaving Law**: While the global sum strictly satisfies $K(n) > B_n$ for all $n \ge 3$, individual strata interlace according to parity:
-   - For odd $n$, $S^\star(n, 2) = 2^{n-1} = S(n, 2) + 1 > S(n, 2)$, where $S(n, k) = {n \brace k}$ denotes the Stirling numbers of the second kind. **There is no weaving on odd lattices**: $S^\star(n, k) \ge S(n, k)$ across all $1 \le k \le n$.
+   - For odd $n$, $R(n, 2) = 2^{n-1} = S(n, 2) + 1 > S(n, 2)$, where $S(n, k) = {n \brace k}$ denotes the Stirling numbers of the second kind. **There is no weaving on odd lattices**: $R(n, k) \ge S(n, k)$ across all $1 \le k \le n$.
    - For even $n$ ($n \ge 4$), the equitable partition $(n/2, n/2)$ has $c_\lambda = 1$ rather than $2$, causing a central binomial deficit:
 
 $$
-S^\star(n, 2) - S(n, 2) = 1 - \binom{n-2}{n/2 - 1} < 0
+R(n, 2) - S(n, 2) = 1 - \binom{n-2}{n/2 - 1} < 0
 $$
 
-   - This creates an **exact single cross-over point** between $k=2$ and $k=3$: $S^\star(n, 2) < S(n, 2)$, but $S^\star(n, k) > S(n, k)$ for all $3 \le k \le n-1$.
+   - This creates an **exact single cross-over point** between $k=2$ and $k=3$: $R(n, 2) < S(n, 2)$, but $R(n, k) > S(n, k)$ for all $3 \le k \le n-1$.
 
 ---
 
@@ -291,7 +291,7 @@ On composite lattices ($\mathbb{Z}\_4, \mathbb{Z}\_6, \dots$), three distinct ob
 
 **Figure 6**: Obstruction mechanisms on the hexagonal lattice $\mathbb{Z}\_6$.
 
-### Higher-Order Solutions on Z_8 and Z_12
+### Higher-Order Solutions on Lattices Z8 and Z12
 
 On higher-order lattices, non-uniform partitions with $k \ge 4$ blocks exhibit richer transversal configurations:
 
@@ -358,19 +358,19 @@ Crucially, the raw zero-solution partitions $Z(n)$ collapse into a much smaller,
 
 This repository supports integer sequences for the On-Line Encyclopedia of Integer Sequences (OEIS):
 1. **The Canonical Sequence $K(n)$** (`%K nonn,easy`): Canonical isotypic composition transversals across all set partitions of $\mathbb{Z}\_n$, established analytically by the Enumeration Theorem and evaluating in milliseconds.
-2. **The Striding Triangle $S^\star(n, k)$** (`%K tabl,easy`): $k$-block graded canonical transversals.
+2. **The Transversal Triangle $R(n, k)$** (`%K tabl,easy`): $k$-block graded canonical transversals.
 3. **The Rooted Microstate Volume $T(n) = n \cdot K(n)$**: Total rooted transversals across all cyclic origins.
 4. **The Obstruction Sequence $Z(n)$** (`%K nonn,hard`): The number of set partitions of $\mathbb{Z}\_n$ admitting zero isotypic transversals, discovered empirically via exhaustive combinatorial lattice search.
 
-### Asymptotic Scaling Law: Super-Polynomial Divergence of K(n)/B_n
+### Asymptotic Scaling Law: Super-Polynomial Divergence of K(n) over B(n)
 
-Because the Striding number of an individual shape satisfies the expectation identity:
+Because the canonical transversal count of an individual shape satisfies the expectation identity:
 
 $$
-\frac{S^\star(\lambda)}{p_\lambda} = c_\lambda \frac{\prod_{j=1}^k \lambda_j}{\binom{n}{k}} \implies R(n) = \frac{K(n)}{B_n} = \mathbb{E}_{\mathcal{M} \in \Pi_n}\left[ c_\lambda \frac{\prod_{j=1}^k \lambda_j}{\binom{n}{k}} \right]
+\frac{R(\lambda)}{p_\lambda} = c_\lambda \frac{\prod_{j=1}^k \lambda_j}{\binom{n}{k}} \implies \rho(n) = \frac{K(n)}{B_n} = \mathbb{E}_{\mathcal{M} \in \Pi_n}\left[ c_\lambda \frac{\prod_{j=1}^k \lambda_j}{\binom{n}{k}} \right]
 $$
 
-the ratio $R(n) = K(n)/B_n$ diverges super-polynomially, with:
+the ratio $\rho(n) = K(n)/B_n$ diverges super-polynomially, with:
 
 $$
 \ln\left( \frac{K(n)}{B_n} \right) \sim \Theta\left(\frac{n}{\ln n}\right) \implies K(n) \sim B_n \cdot \exp\left( \Theta\left(\frac{n}{\ln n}\right) \right)
@@ -411,13 +411,13 @@ possesses no known closed form and represents an open problem in cyclic transver
 
 ### Canonical Formula Generator (`verify_formula.py`)
 
-The Python CLI tool implements the closed-form bipartite container theorem. It evaluates terms $n \le 25$ in milliseconds and can display the full Striding Triangle:
+The Python CLI tool implements the closed-form bipartite container theorem. It evaluates terms $n \le 25$ in milliseconds and can display the full Transversal Triangle:
 
 ```bash
 # Compute K(n) and rooted T(n)
 python3 verify_formula.py --max-n 16
 
-# Display the Striding Triangle S*(n, k) in markdown format
+# Display the Transversal Triangle R(n, k) in markdown format
 python3 verify_formula.py --max-n 10 --k-table --format markdown
 ```
 
