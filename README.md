@@ -59,7 +59,7 @@ The pair $(o, \gamma)$ is termed a **rooted isotypic composition transversal** o
 
 For an individual labeled partition $\mathcal{M}$, the number of valid pairs $(o, \gamma)$ is the **rooted transversal count** $T(\mathcal{M})$. Because individual asymmetric partitions have solution counts that can't be divided by $n$ (exhibiting discrete min-max variation across rotational orientations), the rooted microstate count naturally depends on $o$.
 
-However, summing $T(\mathcal{M})$ over cyclic orbits or across all partitions of shape $\lambda \vdash n$ means it must be an exact multiple of $n$. We define the **canonical (unoriented) transversal count** as:
+However, summing $T(\mathcal{M})$ over cyclic orbits or across all partitions of shape $\lambda \vdash n$ means it must be an exact multiple of $n$. Consequently, we're free to define the **canonical (unoriented) transversal count** as:
 
 $$
 R(\lambda) = \frac{T(\lambda)}{n}
@@ -79,7 +79,7 @@ The concept of a transversal (or System of Distinct Representatives, SDR) has a 
    In classical transversal theory and matroid theory (Hall's Marriage Theorem, 1935; Rota, 1964; Mirsky, 1971), a transversal of a family of subsets requires only that each subset contributes one representative. For a set partition $\mathcal{M} = \{m_1, \dots, m_k\}$ where blocks are mutually disjoint, Hall's condition holds trivially, and the number of unconstrained transversals is simply the product of block cardinalities: $N_{\mathrm{classical}} = \prod_{i=1}^k |m_i| = \prod_{j=1}^k \lambda_j$. Every partition trivially admits solutions, and obstructions cannot exist.
 
 2. **Coset Transversals in Group Theory**:  
-   In abstract group theory, transversals of group partitions are studied primarily when the partition consists of the cosets of a subgroup $H \le \mathbb{Z}\_n$. This classical setting is thus restricted to *uniform* partition shapes $(d^{n/d})$ and does not consider non-uniform partition shapes $\lambda \vdash n$ or cyclic step sequence orderings.
+   In abstract group theory, transversals of group partitions are studied primarily when the partition consists of the cosets of a subgroup $H \le \mathbb{Z}\_n$. This classical setting is thus restricted to *uniform* partition shapes $(d^{n/d})$ without considering haphazard partition shapes $\lambda \vdash n$ or cyclic step sequence orderings.
 
 3. **Latin Square and Cayley Table Transversals (Hall–Paige Conjecture)**:  
    A well-known transversal problem in group theory concerns transversals in the Cayley table of a finite group (the Hall–Paige conjecture, formulated in 1955 and proved by Wilcox, Evans, and Bray in 2009). These transversals represent selections in a two-dimensional multiplication table rather than 1D cyclic polygon embeddings.
