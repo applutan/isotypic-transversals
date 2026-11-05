@@ -257,7 +257,7 @@ On finite cyclic lattices, transversal realisability is governed by the interpla
 
 ### Prime Lattices: Universal Realisability at Small Orders
 
-On $\mathbb{Z}\_3$ and $\mathbb{Z}\_5$, 100% of all set partitions admit at least one valid transversal ($Z(3) = 0, Z(5) = 0$). Step distances cannot be trapped in sub-lattice cosets. Furthermore, $\mathbb{Z}\_5$ represents the maximal cyclic lattice where universal realisability ($Z(5) = 0$) and total bilateral reversibility ($N^C = N^\tau = N^D$) coexist in complete harmony: every transversal polygon and constituent partition block is strictly reflection-symmetric (rendered exclusively in serene blue), before chirality emerges and turns the combinatorial universe pink at $\mathbb{Z}\_6$.
+On $\mathbb{Z}\_3$ and $\mathbb{Z}\_5$, 100% of all set partitions admit at least one valid transversal, with $Z(3) = Z(5) = 0$. Step distances cannot be trapped in sub-lattice cosets. Furthermore, $\mathbb{Z}\_5$ represents the maximal cyclic lattice where universal realisability ($Z(5) = 0$) and total bilateral reversibility ($N^C = N^\tau = N^D$) coexist in complete harmony: every transversal polygon and constituent partition block is strictly reflection-symmetric—rendered exclusively in serene blue—before chirality emerges and turns the combinatorial universe pink at $\mathbb{Z}\_6$.
 
 <p align="center">
   <img src="img/fig2_z3_geometry.png" width="380" alt="Z3 Forbidden Origin" />
