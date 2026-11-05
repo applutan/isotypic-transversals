@@ -257,7 +257,7 @@ On finite cyclic lattices, transversal realisability is governed by the interpla
 
 ### Prime Lattices: Universal Realisability at Small Orders
 
-On $\mathbb{Z}\_3$ and $\mathbb{Z}\_5$, 100% of all set partitions admit at least one valid transversal, with $Z(3) = Z(5) = 0$. Step distances cannot be trapped in sub-lattice cosets. Furthermore, $\mathbb{Z}\_5$ represents the maximal cyclic lattice where universal realisability ($Z(5) = 0$) and total bilateral reversibility ($N^C = N^\tau = N^D$) coexist in complete harmony: every transversal polygon and constituent partition block is strictly reflection-symmetric—rendered exclusively in serene blue—before chirality emerges and turns the combinatorial universe pink at $\mathbb{Z}\_6$.
+On $\mathbb{Z}\_3$ and $\mathbb{Z}\_5$, 100% of all set partitions admit at least one valid transversal, with $Z(3) = Z(5) = 0$. Step distances cannot be trapped in sub-lattice cosets. Furthermore, $\mathbb{Z}\_5$ represents the maximal cyclic lattice where universal realisability ($Z(5) = 0$) and total bilateral reversibility ($N^C = N^\tau = N^D$) coincide: every transversal polygon and constituent partition block is strictly reflection-symmetric (coloured blue), prior to the emergence of chiral enantiomorphic pairs at $\mathbb{Z}\_6$.
 
 <p align="center">
   <img src="img/fig2_z3_geometry.png" width="380" alt="Z3 Forbidden Origin" />
@@ -348,9 +348,9 @@ Crucially, the raw zero-solution partitions $Z(n)$ collapse into a much smaller,
 - On $\mathbb{Z}\_7$, all 49 obstruction partitions collapse into 7 dihedral orbits (each of mass 7, giving $7 \times 7 = 49$).
 - On $\mathbb{Z}\_8$, the 300 obstruction partitions collapse into 41 dihedral orbits.
 
-- 🌸 **[High-Resolution Poster: The 12 Unlabelled Z_5 Blooms](img/chart_z5_12_efflorescences.png)**
-- 🏷️ **[High-Resolution Technical Poster: The 12 Labelled Z_5 Blooms](img/chart_z5_12_efflorescences_labelled.png)**
-- 🔍 **[High-Resolution Poster: The 37 Dihedral Mosaic Orbits on Z_6](img/catalogue_z6_37mosaics.png)**
+- 🌸 **[High-Resolution Poster: The 12 Unlabelled Z5 Blooms](img/chart_z5_12_efflorescences.png)**
+- 🏷️ **[High-Resolution Technical Poster: The 12 Labelled Z5 Blooms](img/chart_z5_12_efflorescences_labelled.png)**
+- 🔍 **[High-Resolution Poster: The 37 Dihedral Mosaic Orbits on Z6](img/catalogue_z6_37mosaics.png)**
 
 ---
 
