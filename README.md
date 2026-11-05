@@ -1,5 +1,5 @@
 # Isotypic Composition Transversals on Cyclic Lattices
-## Canonical Transversals (the Hopeful "Krell Numbers" K(n)), Striding Numbers of the Second Kind S*(n, k), and the Cyclic Lattice Census
+## Canonical Transversals and a Cyclic Lattice Census
 
 **Author**: Paul Sampson  
 **Date**: November 2026  
@@ -9,9 +9,9 @@
 
 ## 1. Introduction and Problem Formulation
 
-Let $\mathbb{Z}\_n = \{1, 2, \dots, n\}$ denote the discrete cyclic lattice of order $n$, considered modulo $n$ with 1-based indexing.
+$\mathbb{Z}\_n = \{1, 2, \dots, n\}$ denotes the discrete cyclic lattice of order $n$, considered modulo $n$ with 1-based indexing.
 
-In the combinatorial geometry of composition mosaics, the vertices of $\mathbb{Z}\_n$ are partitioned into non-overlapping subsets. When the partition blocks are uniform, complete conjugate orthogonal transversal systems exist. For general non-uniform set partitions, however, an individual cyclic polygon can still act as an exact transversal cross-section.
+In the combinatorial geometry of *composition mosaics*, vertices of $\mathbb{Z}\_n$ are partitioned into non-overlapping subsets. For general set partitions an individual cyclic polygon can act as an exact transversal cross-section.
 
 <p align="center">
   <img src="img/fig1_z12_intro_duality.png" width="580" alt="Dual Transversal on Z12" />
@@ -41,7 +41,7 @@ $$
 Given an origin vertex $o \in \mathbb{Z}\_n$ and an isotypic composition $\gamma = (\gamma_1, \dots, \gamma_k)$, prefix step sums generate a $k$-vertex cyclic polygon $G(o, \gamma) \subset \mathbb{Z}\_n$:
 
 $$
-G(o, \gamma) = \{g_1, g_2, \dots, g_k\} \subset \mathbb{Z}_n, \quad g_r = o + \sum_{j=1}^{r-1} \gamma_j \pmod n \quad (1 \le r \le k)
+G(o, \gamma) = \{g_1, g_2, \dots, g_k\} \subset \mathbb{Z}_n, \quad g_1 = o, g_r = o + \sum_{j=1}^{r-1} \gamma_j \pmod n \quad (1 \lt r \le k)
 $$
 
 where vertex indices are taken in $\{1, \dots, n\}$. Because each $\gamma_j \ge 1$ and $\sum_{j=1}^k \gamma_j = n$, the $k$ vertices of $G(o, \gamma)$ are distinct.
@@ -55,43 +55,40 @@ $$
 
 The pair $(o, \gamma)$ is termed a **rooted isotypic composition transversal** of $\mathcal{M}$.
 
-### Microstates vs Canonical Transversals: The Hopeful "Krell Numbers"
+### Microstates vs Canonical Transversals
 
-For an individual labeled partition $\mathcal{M}$, the number of valid pairs $(o, \gamma)$ is the **rooted transversal count** $T(\mathcal{M})$. Because individual asymmetric partitions have solution counts that cannot be divided by $n$ (exhibiting discrete min-max variation across rotational orientations), the rooted microstate count is coordinate-dependent.
+For an individual labeled partition $\mathcal{M}$, the number of valid pairs $(o, \gamma)$ is the **rooted transversal count** $T(\mathcal{M})$. Because individual asymmetric partitions have solution counts that can't be divided by $n$ (exhibiting discrete min-max variation across rotational orientations), the rooted microstate count naturally depends on $o$.
 
-However, summing $T(\mathcal{M})$ over cyclic orbits or across all partitions of shape $\lambda \vdash n$ collapses cleanly into an exact multiple of $n$. We define the **canonical (unoriented) transversal count** as:
+However, summing $T(\mathcal{M})$ over cyclic orbits or across all partitions of shape $\lambda \vdash n$ means it must be an exact multiple of $n$. We define the **canonical (unoriented) transversal count** as:
 
 $$
 S^\star(\lambda) = \frac{T(\lambda)}{n}
 $$
 
-Summing $S^\star(\lambda)$ over all partitions of length $k$ gives the **Striding numbers of the second kind** $S^\star(n, k)$, and summing over all $k \in \{1, \dots, n\}$ yields the total canonical transversal count:
+Summing $S^\star(\lambda)$ over all partitions of length $k$ gives **striding numbers** $S^\star(n, k)$, and summing over all $k \in \{1, \dots, n\}$ yields the total canonical transversal count:
 
 $$
 K(n) = \sum_{k=1}^n S^\star(n, k) = \frac{T(n)}{n}
 $$
 
-> [!NOTE]
-> **Nomenclature Note on the "Krell Numbers"**: The designation **Krell numbers** for the sequence $K(n)$ is a hopeful working moniker coined in this research (evoking the ancient, enigmatic harmonic civilization of science fiction, reflecting the natural polyphonic resonance of these cyclic transversal structures). Outside the author's hopeful imagination, the sequence is formally catalogued as the **canonical isotypic transversal numbers** or the **unoriented transversal sum sequence**. The total rooted count $T(n) = n \cdot K(n)$ represents the rotational microstate volume.
-
 ### Combinatorial Context and Literature Precursors
 
-The concept of a transversal (or System of Distinct Representatives, SDR) has a rich history across discrete mathematics, against which the specific geometry of isotypic composition transversals can be situated:
+The concept of a transversal (or System of Distinct Representatives, SDR) has history across discrete mathematics, against which the specific geometry of isotypic composition transversals can be situated:
 
 1. **Classical Systems of Distinct Representatives (Hall, Rota, Mirsky)**:  
    In classical transversal theory and matroid theory (Hall's Marriage Theorem, 1935; Rota, 1964; Mirsky, 1971), a transversal of a family of subsets requires only that each subset contributes one representative. For a set partition $\mathcal{M} = \{m_1, \dots, m_k\}$ where blocks are mutually disjoint, Hall's condition holds trivially, and the number of unconstrained transversals is simply the product of block cardinalities: $N_{\mathrm{classical}} = \prod_{i=1}^k |m_i| = \prod_{j=1}^k \lambda_j$. Every partition trivially admits solutions, and obstructions cannot exist.
 
 2. **Coset Transversals in Group Theory**:  
-   In abstract group theory, transversals of group partitions are studied primarily when the partition consists of the cosets of a subgroup $H \le \mathbb{Z}\_n$. This classical setting is restricted to uniform partition shapes $(d^{n/d})$ and does not consider non-uniform partition shapes $\lambda \vdash n$ or cyclic step sequence orderings.
+   In abstract group theory, transversals of group partitions are studied primarily when the partition consists of the cosets of a subgroup $H \le \mathbb{Z}\_n$. This classical setting is thus restricted to *uniform* partition shapes $(d^{n/d})$ and does not consider non-uniform partition shapes $\lambda \vdash n$ or cyclic step sequence orderings.
 
 3. **Latin Square and Cayley Table Transversals (Hall–Paige Conjecture)**:  
-   A celebrated transversal problem in group theory concerns transversals in the Cayley table of a finite group (the Hall–Paige conjecture, formulated in 1955 and proved by Wilcox, Evans, and Bray in 2009). These transversals represent selections in a two-dimensional multiplication table rather than 1D cyclic polygon embeddings.
+   A well-known transversal problem in group theory concerns transversals in the Cayley table of a finite group (the Hall–Paige conjecture - formulated in 1955 - proved by Wilcox, Evans, and Bray in 2009). These transversals represent selections in a two-dimensional multiplication table rather than 1D cyclic polygon embeddings.
 
 4. **Additive Combinatorics (Snevily's Conjecture & Arsovski's Theorem)**:  
-   Snevily's conjecture (1999, proved by Bodan Arsovski in 2011) establishes that for two subsets $A, B \subset \mathbb{Z}\_n$ of equal cardinality $k$ ($n$ odd), there exists a bijection $\pi \colon A \to B$ whose sums $a + \pi(a)$ are distinct. While addressing cyclic groups, it studies pairwise subset addition rather than the global partitioning of the lattice.
+   Snevily's conjecture (1999, proved by Bodan Arsovski in 2011) establishes that for two subsets $A, B \subset \mathbb{Z}\_n$ of equal cardinality $k$ ($n$ odd), there's a bijection $\pi \colon A \to B$ whose sums $a + \pi(a)$ are distinct. While addressing cyclic groups, it studies pairwise subset addition rather than the global lattice partitioning.
 
 5. **Independent Transversals in Hypergraphs (Alon, Loh, Sudakov)**:  
-   In extremal combinatorics, an independent transversal is a transversal that forms an independent set in a supporting graph (Alon, 1994; Loh and Sudakov, 2008). This is a graph-colouring condition without metric cyclic step requirements.
+   In extremal combinatorics, an independent transversal is one forming an independent set in a supporting graph (Alon, 1994; Loh and Sudakov, 2008). This is a graph-colouring condition without metric cyclic step requirements.
 
 **The Isotypic Difference**:  
 In an **isotypic composition transversal**, the transversal is constrained to be an inscribed cyclic polygon $G(o, \gamma) \subset \mathbb{Z}\_n$ whose cyclic stride differences $(\gamma_1, \dots, \gamma_k)$ must form an exact permutation of the block cardinalities $(|m_1|, \dots, |m_k|)$. This metric and algebraic coupling to the underlying partition capacities introduces rigid modular constraints:
@@ -102,7 +99,7 @@ In an **isotypic composition transversal**, the transversal is constrained to be
 
 ## 2. The Closed-Form Enumeration Theorem and the Striding Triangle
 
-### Theorem (Canonical Krell Numbers and Striding Numbers of the Second Kind)
+### Theorem
 
 For any finite cyclic lattice $\mathbb{Z}\_n$, the total number of canonical (origin-fixed) isotypic composition transversals across all set partitions $\mathcal{M}$ of $\mathbb{Z}\_n$ is given by the exact closed-form expression:
 
@@ -110,7 +107,7 @@ $$
 K(n) = \sum_{k=1}^n S^\star(n, k)
 $$
 
-where the **Striding numbers of the second kind** $S^\star(n, k)$ grade canonical transversals by block count $k = \ell(\lambda)$:
+where $S^\star(n, k)$ grade canonical transversals by block count $k = \ell(\lambda)$:
 
 $$
 S^\star(n, k) = \sum_{\substack{\lambda \vdash n \\ \ell(\lambda) = k}} (c_\lambda)^2 \binom{n - k}{\lambda_1 - 1, \lambda_2 - 1, \dots, \lambda_k - 1}
@@ -122,7 +119,7 @@ $$
 c_\lambda = \frac{k!}{\prod_{i=1}^n m_i!}
 $$
 
-denotes the composition multinomial coefficient counting distinct permutations of $\lambda$. The total rooted microstate volume across all labeled origins is:
+is the composition multinomial coefficient counting distinct permutations of $\lambda$. The total rooted microstate volume across all labeled origins is:
 
 $$
 T(n) = n \cdot K(n)
@@ -134,14 +131,14 @@ Consider the bipartite incidence graph between $\mathcal{P}\_n$ (the set of all 
 
 An edge connects $\mathcal{M} \in \mathcal{P}\_n$ and $(1, \gamma) \in \mathcal{G}\_n^{(1)}$ if and only if $\mathrm{type}(\gamma) = \mathrm{shape}(\mathcal{M})$ and $G(1, \gamma)$ is a transversal of $\mathcal{M}$.
 
-The total number of canonical incidences $K(n)$ is evaluated by reversing the summation order: instead of summing the degree of each partition $\mathcal{M}$, we fix the polygon $(1, \gamma)$ first and count how many set partitions $\mathcal{M}$ of shape $\lambda = \mathrm{type}(\gamma)$ admit $G(1, \gamma)$ as a transversal:
+The total number of canonical incidences $K(n)$ is evaluated by reversing the summation order: instead of summing the degree of each partition $\mathcal{M}$, first fix the polygon $(1, \gamma)$ and count how many set partitions $\mathcal{M}$ of shape $\lambda = \mathrm{type}(\gamma)$ admit $G(1, \gamma)$ as a transversal:
 
 1. Anchoring at origin $o = 1$, there are $c_\lambda = \frac{k!}{\prod m_i!}$ distinct compositions $\gamma \vDash n$ whose parts match the multiset $\lambda$.
 2. For any fixed choice of $(1, \gamma)$, the vertices $G(1, \gamma) = \{g_1, g_2, \dots, g_k\} \subset \mathbb{Z}\_n$ form a fixed set of $k$ distinct points.
 3. For $G(1, \gamma)$ to transversalise $\mathcal{M} = \{m_1, \dots, m_k\}$, each vertex $g_j$ must belong to a distinct block of $\mathcal{M}$. This establishes a bijection between the $k$ vertices of $G(1, \gamma)$ and the $k$ blocks of $\mathcal{M}$.
 4. Assigning the block cardinalities $(s_1, \dots, s_k)$ from the multiset $\lambda$ to the ordered vertices $(g_1, \dots, g_k)$ can be done in $c_\lambda = \frac{k!}{\prod_{i=1}^n m_i!}$ ways.
 5. Once each vertex $g_j$ is designated as the root of a block of size $s_j \ge 1$, exactly 1 vertex (namely $g_j$) is assigned. There remain $n - k$ unassigned vertices in the lattice: $\mathbb{Z}\_n \setminus G(1, \gamma)$. To complete the set partition $\mathcal{M}$, these $n - k$ elements must be distributed into the $k$ labelled containers so that container $j$ receives exactly $s_j - 1$ elements.
-6. **Geometric Decoupling**: Crucially, any choice of subsets of sizes $(s_j - 1)$ from $\mathbb{Z}\_n \setminus G(1, \gamma)$ produces a valid, mutually disjoint set partition of shape $\lambda$. The cyclic coordinates and modular distances of the remaining vertices place no restriction on set membership.
+6. **Geometric Decoupling**: Note that any choice of subsets of sizes $(s_j - 1)$ from $\mathbb{Z}\_n \setminus G(1, \gamma)$ produces a valid, mutually disjoint set partition of shape $\lambda$. So the cyclic coordinates and modular distances of the remaining vertices place no restriction on set membership.
 7. The number of ways to partition $n - k$ elements into $k$ labelled blocks of capacities $(s_1 - 1, \dots, s_k - 1)$ is given by the multinomial coefficient:
 
 $$
@@ -167,7 +164,7 @@ The algebraic structure of the Enumeration Theorem can be visualized directly as
 **Figure 2**: Closed container representation (left) versus the everted transversal bouquet (right) on $\mathbb{Z}\_{12}$.
 
 Each factor of the formula corresponds to a physical geometric layer of the bouquet:
-1. **The Origin Factor ($n$)**: The $n$ cyclic rotations of the central shell, factored out in canonical Krell numbers $K(n)$.
+1. **The Origin Factor ($n$)**: The $n$ cyclic rotations of the central shell, factored out in canonical $K(n)$.
 2. **The First Permutation Factor ($c_\lambda$) — Central Polygon Strides**: The cyclic composition $\gamma = (\gamma_1, \dots, \gamma_k) \vDash n$ of type $\lambda$, defining the shaded central polygon with edge lengths $(3, 4, 5)$ marked by circled badges at the edge midpoints.
 3. **The Second Permutation Factor ($c_\lambda$) — Internal Routing Arrows**: The straight arrows directed from the midpoint size badges to the connection vertices ($3, 6, 10$). These define the size-assignment bijection $\pi: \text{Edges}(G) \to \text{Vertices}(G)$ without crossing edges of the same weight.
 4. **The Container Multinomial $\binom{n-k}{\lambda_1-1, \dots}$ — Outer Leaf Petals**: The $n - k$ unassigned elements of $\mathbb{Z}\_n$ populating the outer satellite shells, which rotate $180^\circ$ around their connection vertices to display the constituent blocks in their natural cyclic coordinates.
@@ -181,7 +178,7 @@ Each factor of the formula corresponds to a physical geometric layer of the bouq
 
 Evaluating $S^\star(n, k)$ across small lattice orders generates the **Striding Triangle**, the canonical isotypic transversal analog of the Stirling numbers of the second kind:
 
-| $n$ | $k=1$ | $k=2$ | $k=3$ | $k=4$ | $k=5$ | $k=6$ | $k=7$ | $k=8$ | **Krell** $K(n)$ | **Bell** $B_n$ |
+| $n$ | $k=1$ | $k=2$ | $k=3$ | $k=4$ | $k=5$ | $k=6$ | $k=7$ | $k=8$ | $K(n)$ | **Bell** $B_n$ |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | **1** | 1 | — | — | — | — | — | — | — | **1** | 1 |
 | **2** | 1 | 1 | — | — | — | — | — | — | **2** | 2 |
@@ -360,7 +357,7 @@ Crucially, the raw zero-solution partitions $Z(n)$ collapse into a much smaller,
 ## 4. Sequence Values, Asymptotic Scaling, and the Complete Census
 
 This repository supports integer sequences for the On-Line Encyclopedia of Integer Sequences (OEIS):
-1. **The Canonical Krell Sequence $K(n)$** (`%K nonn,easy`): Canonical isotypic composition transversals across all set partitions of $\mathbb{Z}\_n$, established analytically by the Enumeration Theorem and evaluating in milliseconds.
+1. **The Canonical Sequence $K(n)$** (`%K nonn,easy`): Canonical isotypic composition transversals across all set partitions of $\mathbb{Z}\_n$, established analytically by the Enumeration Theorem and evaluating in milliseconds.
 2. **The Striding Triangle $S^\star(n, k)$** (`%K tabl,easy`): $k$-block graded canonical transversals.
 3. **The Rooted Microstate Volume $T(n) = n \cdot K(n)$**: Total rooted transversals across all cyclic origins.
 4. **The Obstruction Sequence $Z(n)$** (`%K nonn,hard`): The number of set partitions of $\mathbb{Z}\_n$ admitting zero isotypic transversals, discovered empirically via exhaustive combinatorial lattice search.
@@ -381,7 +378,7 @@ $$
 
 While $K(n)$ and $B_n$ share the same leading super-exponential factorial order $(n/\ln n)^n$, $K(n)$ possesses an exponentially larger pre-factor. In contrast, the zero-solution fraction $Z(n)/B_n$ saturates to a stable constant of $\approx 7\%-8\%$:
 
-| $n$ | Partitions $B_n$ | Canonical Krell $K(n)$ | Rooted Microstates $T(n)$ | Ratio $K(n)/B_n$ | Zero Partitions $Z(n)$ | Zero % $Z(n)/B_n$ |
+| $n$ | Partitions $B_n$ | Canonical $K(n)$ | Rooted Microstates $T(n)$ | Ratio $K(n)/B_n$ | Zero Partitions $Z(n)$ | Zero % $Z(n)/B_n$ |
 |:---:|---:|---:|---:|:---:|---:|:---:|
 | 1 | 1 | 1 | 1 | 1.000 | 0 | $0.00\%$ |
 | 2 | 2 | 2 | 4 | 1.000 | 0 | $0.00\%$ |
@@ -417,7 +414,7 @@ possesses no known closed form and represents an open problem in cyclic transver
 The Python CLI tool implements the closed-form bipartite container theorem. It evaluates terms $n \le 25$ in milliseconds and can display the full Striding Triangle:
 
 ```bash
-# Compute canonical Krell numbers K(n) and rooted T(n)
+# Compute K(n) and rooted T(n)
 python3 verify_formula.py --max-n 16
 
 # Display the Striding Triangle S*(n, k) in markdown format
