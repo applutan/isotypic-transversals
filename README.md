@@ -356,11 +356,13 @@ Crucially, the raw zero-solution partitions $Z(n)$ collapse into a much smaller,
 
 ## 4. Sequence Values, Asymptotic Scaling, and the Complete Census
 
-This repository supports integer sequences submitted to the On-Line Encyclopedia of Integer Sequences (OEIS):
-1. **The Canonical Sequence $K(n)$** ([OEIS A401780](https://oeis.org/A401780)): Canonical isotypic composition transversals across all set partitions of $\mathbb{Z}\_n$, established analytically by the Enumeration Theorem and evaluating in milliseconds.
+This repository supports integer sequences on the On-Line Encyclopedia of Integer Sequences (OEIS):
+1. **The Canonical Sequence $K(n)$** ([OEIS A401780](https://oeis.org/A401780), published Nov 2026): Canonical isotypic composition transversals across all set partitions of $\mathbb{Z}\_n$, established analytically by the Enumeration Theorem and extended to $n = 551$ in the official OEIS b-file.
+   - **Parity Congruence (Alois P. Heinz, 2026)**: $K(n) \pmod 2 = \text{A133872}(n)$, exhibiting strict period-4 cycling $[1, 1, 0, 0, 1, 1, 0, 0, \dots]$ ($\text{odd}, \text{odd}, \text{even}, \text{even}$).
+   - **Algebraic Connection**: Extends Alois P. Heinz's nondecreasing block partition sum [OEIS A327711](https://oeis.org/A327711) by incorporating the squared multinomial coefficient $(c_\lambda)^2$.
 2. **The Transversal Triangle $R(n, k)$**: $k$-block graded canonical transversals.
 3. **The Rooted Microstate Volume $T(n) = n \cdot K(n)$**: Total rooted transversals across all cyclic origins.
-4. **The Obstruction Sequence $Z(n)$** ([OEIS A401781](https://oeis.org/A401781)): The number of set partitions of $\mathbb{Z}\_n$ admitting zero isotypic transversals, discovered empirically via exhaustive combinatorial lattice search.
+4. **The Obstruction Sequence $Z(n)$** ([OEIS A401781](https://oeis.org/A401781), in review): The number of set partitions of $\mathbb{Z}\_n$ admitting zero isotypic transversals, discovered empirically via exhaustive combinatorial lattice search.
 
 ### Asymptotic Scaling Law: Super-Polynomial Divergence of K(n) over B(n)
 
