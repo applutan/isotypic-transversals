@@ -362,7 +362,7 @@ This repository supports integer sequences on the On-Line Encyclopedia of Intege
    - **Algebraic Connection**: Extends Alois P. Heinz's nondecreasing block partition sum [OEIS A327711](https://oeis.org/A327711) by incorporating the squared multinomial coefficient $(c_\lambda)^2$.
 2. **The Transversal Triangle $R(n, k)$**: $k$-block graded canonical transversals.
 3. **The Rooted Microstate Volume $T(n) = n \cdot K(n)$**: Total rooted transversals across all cyclic origins.
-4. **The Obstruction Sequence $Z(n)$** ([OEIS A401781](https://oeis.org/A401781), in review): The number of set partitions of $\mathbb{Z}\_n$ admitting zero isotypic transversals, discovered empirically via exhaustive combinatorial lattice search.
+4. **The Obstruction Sequence $Z(n)$** ([OEIS A401781](https://oeis.org/A401781), published Nov 2026): The number of set partitions of $\mathbb{Z}\_n$ admitting zero isotypic transversals, discovered empirically via exhaustive combinatorial lattice search.
 
 ### Asymptotic Scaling Law: Super-Polynomial Divergence of K(n) over B(n)
 
