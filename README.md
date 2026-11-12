@@ -378,7 +378,7 @@ $$
 \ln\left( \frac{K(n)}{B_n} \right) \sim \Theta\left(\frac{n}{\ln n}\right) \implies K(n) \sim B_n \cdot \exp\left( \Theta\left(\frac{n}{\ln n}\right) \right)
 $$
 
-While $K(n)$ and $B_n$ share the same leading super-exponential factorial order $(n/\ln n)^n$, $K(n)$ possesses an exponentially larger pre-factor. In contrast, the zero-solution fraction $Z(n)/B_n$ saturates to a stable constant of $\approx 7\%-8\%$:
+While $K(n)$ and $B_n$ share the same leading super-exponential factorial order $(n/\ln n)^n$, $K(n)$ possesses an exponentially larger pre-factor. In contrast, the zero-solution fraction $Z(n)/B_n$ initially peaks around $8.1\%$ at $n=10$ before declining to $6.8\%$ at $n=16$; its asymptotic limit remains an open problem:
 
 | $n$ | Partitions $B_n$ | Canonical $K(n)$ | Rooted Microstates $T(n)$ | Ratio $K(n)/B_n$ | Zero Partitions $Z(n)$ | Zero % $Z(n)/B_n$ |
 |:---:|---:|---:|---:|:---:|---:|:---:|
